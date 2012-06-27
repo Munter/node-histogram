@@ -11,6 +11,7 @@ histogram(fileName, function (data) {
 	console.log(fileName + ' has ' + data.colors.rgba + ' colors');
 });
 ```
+fileName may be both a file path or a buffer;
 
 Data structure
 --------------

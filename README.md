@@ -36,3 +36,8 @@ Data structure
     alphachannel: false // Indicates that one or more pixels are translucent
 }
 ```
+
+License
+-------
+This software is licensed under the beerware license. Do whatever you want with it.
+If we meet some day, and you think this stuff is worth it, you can buy me a beer in return.

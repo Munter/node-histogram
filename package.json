@@ -1,7 +1,7 @@
 {
     "author": "Peter Müller <munter@fumle.dk> (http://fumle.dk)",
     "name": "histogram",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Provides a histogram data structure using canvas",
     "keywords": [
         "histogram",

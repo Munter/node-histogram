@@ -1,0 +1,26 @@
+{
+    "author": "Peter Müller <munter@fumle.dk> (http://fumle.dk)",
+    "name": "histogram",
+    "description": "Provides a histogram data structure using canvas",
+    "version": "0.0.1",
+    "homepage": "http://munter.github.com/node-histogram",
+    "repository": {
+        "url": "git://github.com/Munter/node-histogram.git"
+    },
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "vows",
+        "prepublish": "npm install && npm test"
+    },
+    "dependencies": {
+        "canvas": "latest",
+        "mmmagic": "latest"
+    },
+    "devDependencies": {
+        "vows": "latest"
+    },
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}

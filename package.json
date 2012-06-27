@@ -13,8 +13,7 @@
         "prepublish": "npm install && npm test"
     },
     "dependencies": {
-        "canvas": "latest",
-        "mmmagic": "latest"
+        "canvas": "latest"
     },
     "devDependencies": {
         "vows": "latest"

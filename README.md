@@ -27,12 +27,12 @@ Data structure
         rgba: 0 // Number of unique RGBA colors
     },
 
-    pallettes: {
+    palettes: {
         rgb: [], // Array of unique colors in hex notation
         rgba: [] // Array of unique colors in hexa notation
     },
 
-    greyscale: true, // Indicates wether all colors are greyscale or not
+    greyscale: true, // Indicates whether all colors are greyscale or not
     alphachannel: false // Indicates that one or more pixels are translucent
 }
 ```

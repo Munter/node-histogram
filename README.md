@@ -2,7 +2,7 @@ Histogram
 =========
 
 Provides a histogram data structure from PNG, JPEG or GIF files using canvas.
-This library works in nodejs and in any canvas supporting browser using <a href="https://github.com/Munter/node-histogram/blob/master/histogram.min.js">histogram.min.js</a>.
+This library works in nodejs and in any canvas supporting browser using <a href="https://raw.github.com/Munter/node-histogram/master/histogram.min.js">histogram.min.js</a>.
 In the browser histogram will be available in `window.histogram`
 You can also use require.js instead, keeping your global scope clean.
 

@@ -1,17 +1,43 @@
 Histogram
 =========
 
-Provides a histogram data structure using canvas.
+Provides a histogram data structure from PNG, JPEG or GIF files using canvas.
+This library works in nodejs and in any canvas supporting browser using <a href="https://github.com/Munter/node-histogram/blob/master/histogram.min.js">histogram.min.js</a>.
+In the browser histogram will be available in `window.histogram`
+You can also use require.js instead, keeping your global scope clean.
 
 
 Example usage
 -------------
+
+NodeJS
 ``` javascript
-histogram(fileName, function (data) {
-	console.log(fileName + ' has ' + data.colors.rgba + ' colors');
+var histogram = require('histogram');
+
+histogram(filePathOrBuffer, function (data) {
+    console.log(filePath + ' has ' + data.colors.rgba + ' colors');
 });
 ```
-fileName may be both a file path or a buffer;
+
+Browser with require.js
+``` javascript
+require(['path/to/histogram.min.js'], function (histogram) {
+    histogram(filePath, function (data) {
+        console.log(filePath + ' has ' + data.colors.rgba + ' colors');
+    });
+});
+```
+
+Vanilla browser
+``` html
+<script src="path/to/histogram.min.js"></script>
+<script>
+    histogram(filePath, function (data) {
+        console.log(filePath + ' has ' + data.colors.rgba + ' colors');
+    });
+</script>
+```
+
 
 Data structure
 --------------

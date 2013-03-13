@@ -41,7 +41,6 @@
         "node": "*"
     },
     "scripts": {
-        "pretest": "npm install",
         "test": "vows",
         "posttest": "uglifyjs -nc lib/index.js > histogram.min.js",
         "prepublish": "npm test"

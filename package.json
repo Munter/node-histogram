@@ -1,48 +1,48 @@
 {
-    "author": "Peter Müller <munter@fumle.dk> (http://fumle.dk)",
-    "name": "histogram",
-    "version": "0.1.3",
-    "description": "Provides a histogram data structure of png, gif and jpeg images using canvas. This library works in the browser as well",
-    "keywords": [
-        "histogram",
-        "image",
-        "png",
-        "jpeg",
-        "jpg",
-        "gif"
-    ],
-    "maintainers": [
-        {
-            "name": "Peter Müller",
-            "email": "munter@fumle.dk",
-            "web": "http://fumle.dk"
-        }
-    ],
-    "licenses": [
-        {
-            "type": "BeerWare"
-        }
-    ],
-    "homepage": "http://munter.github.com/node-histogram",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/Munter/node-histogram.git"
-    },
-    "main": "lib/index.js",
-    "dependencies": {
-        "canvas": "~1.0.1"
-    },
-    "devDependencies": {
-        "uglify-js": "~1.3.2",
-        "vows": ">=0.6.3"
-    },
-    "optionalDependencies": {},
-    "engines": {
-        "node": "*"
-    },
-    "scripts": {
-        "test": "vows",
-        "posttest": "uglifyjs -nc lib/index.js > histogram.min.js",
-        "prepublish": "npm test"
+  "author": "Peter Müller <munter@fumle.dk> (http://fumle.dk)",
+  "name": "histogram",
+  "version": "0.1.4",
+  "description": "Provides a histogram data structure of png, gif and jpeg images using canvas. This library works in the browser as well",
+  "keywords": [
+    "histogram",
+    "image",
+    "png",
+    "jpeg",
+    "jpg",
+    "gif"
+  ],
+  "maintainers": [
+    {
+      "name": "Peter Müller",
+      "email": "munter@fumle.dk",
+      "web": "http://fumle.dk"
     }
+  ],
+  "licenses": [
+    {
+      "type": "BeerWare"
+    }
+  ],
+  "homepage": "http://munter.github.com/node-histogram",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Munter/node-histogram.git"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "canvas": "~1.0.1"
+  },
+  "devDependencies": {
+    "uglify-js": "~1.3.2",
+    "vows": ">=0.6.3"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "vows",
+    "posttest": "uglifyjs -nc lib/index.js > histogram.min.js",
+    "prepublish": "npm test"
+  }
 }

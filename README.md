@@ -15,14 +15,14 @@ NodeJS
 ``` javascript
 var histogram = require('histogram');
 
-histogram(fileName || Buffer, function (data) {
+histogram(fileName || Buffer, function (err, data) {
     console.log(filePath + ' has ' + data.colors.rgba + ' colors');
 });
 ```
 
 Browser with require.js
 ``` javascript
-require(['path/to/histogram.min.js'], function (histogram) {
+require(['path/to/histogram.min.js'], function (err, histogram) {
     histogram(URL || FileReader.result, function (data) {
         console.log(filePath + ' has ' + data.colors.rgba + ' colors');
     });
@@ -33,7 +33,7 @@ Vanilla browser
 ``` html
 <script src="path/to/histogram.min.js"></script>
 <script>
-    histogram(URL || FileReader.result, function (data) {
+    histogram(URL || FileReader.result, function (err, data) {
         console.log(filePath + ' has ' + data.colors.rgba + ' colors');
     });
 </script>

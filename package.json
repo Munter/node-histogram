@@ -42,7 +42,7 @@
   },
   "scripts": {
     "test": "vows",
-    "posttest": "uglifyjs -nc lib/index.js > histogram.min.js",
+    "posttest": "./node_modules/uglify-js/bin/uglifyjs -nc lib/index.js > histogram.min.js",
     "prepublish": "npm test"
   }
 }

@@ -68,3 +68,7 @@ License
 -------
 This software is licensed under the beerware license. Do whatever you want with it.
 If we meet some day, and you think this stuff is worth it, you can buy me a beer in return.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Munter/node-histogram/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

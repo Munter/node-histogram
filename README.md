@@ -1,6 +1,9 @@
-[![build status](https://secure.travis-ci.org/Munter/node-histogram.png)](http://travis-ci.org/Munter/node-histogram)
 Histogram
 =========
+[![NPM version](https://badge.fury.io/js/histogram.png)](http://badge.fury.io/js/histogram)
+[![Build Status](https://travis-ci.org/Munter/node-histogram.png?branch=master)](https://travis-ci.org/Munter/node-histogram)
+[![Coverage Status](https://coveralls.io/repos/Munter/node-histogram/badge.png)](https://coveralls.io/r/Munter/node-histogram)
+[![Dependency Status](https://david-dm.org/Munter/node-histogram.png)](https://david-dm.org/Munter/node-histogram)
 
 Provides a histogram data structure from PNG, JPEG or GIF files using canvas.
 This library works in nodejs and in any canvas supporting browser using <a href="https://raw.github.com/Munter/node-histogram/master/histogram.min.js">histogram.min.js</a>.

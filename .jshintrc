@@ -90,10 +90,8 @@
         "__dirname",
         "__filename",
         "Buffer",
-        "TR",
-        "TRPAT",
-        "GETTEXT",
-        "GETSTATICURL",
-        "ko"
+        "describe",
+        "it",
+        "before"
     ]
 }

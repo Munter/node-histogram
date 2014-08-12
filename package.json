@@ -1,7 +1,7 @@
 {
   "author": "Peter Müller <munter@fumle.dk> (http://fumle.dk)",
   "name": "histogram",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "Provides a histogram data structure of png, gif and jpeg images using canvas. This library works in the browser as well",
   "keywords": [
     "histogram",

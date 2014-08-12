@@ -28,6 +28,10 @@
     "type": "git",
     "url": "git://github.com/Munter/node-histogram.git"
   },
+  "files": [
+    "lib",
+    "histogram.min.js"
+  ],
   "main": "lib/index.js",
   "dependencies": {
     "canvas": "^1.1.6"

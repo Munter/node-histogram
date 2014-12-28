@@ -53,9 +53,37 @@ describe('Histogram of gradient.png', function () {
         });
     });
 
-    it('1hould have 1 rgba color', function (done) {
+    it('should have 1 rgba color', function (done) {
         histogram(path, function (error, result) {
             expect(result.colors.rgb, 'to be', 1);
+
+            done();
+        });
+    });
+});
+
+describe('Histogram of gradient-red.png', function () {
+    var path = __dirname + '/images/gradient-red.png';
+
+    it('should be greyscale', function (done) {
+        histogram(path, function (error, result) {
+            expect(result.greyscale, 'to be false');
+
+            done();
+        });
+    });
+
+    it('should have an alpha channel', function (done) {
+        histogram(path, function (error, result) {
+            expect(result.alphachannel, 'to be true');
+
+            done();
+        });
+    });
+
+    it('should have 256 alpha channel colors', function (done) {
+        histogram(path, function (error, result) {
+            expect(result.colors.rgba, 'to be', 256);
 
             done();
         });

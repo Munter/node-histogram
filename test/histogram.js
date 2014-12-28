@@ -1,5 +1,7 @@
-var expect = require('unexpected'),
-    histogram = require('../lib/index.js');
+/*global weknowhow*/
+var expect = typeof weknowhow === 'undefined' ? require('unexpected') : weknowhow.expect,
+    histogram = typeof histogram === 'undefined' ? require('../lib/index.js') : histogram,
+    imagePath = typeof __dirname !== 'undefined' ? __dirname + '/images/' : './images/';
 
 describe('api', function () {
     it('should throw on invalid image buffer argument', function () {
@@ -27,7 +29,7 @@ describe('api', function () {
 });
 
 describe('Histogram of gradient.png', function () {
-    var path = __dirname + '/images/gradient.png';
+    var path = imagePath + 'gradient.png';
 
     it('should be greyscale', function (done) {
         histogram(path, function (error, result) {
@@ -63,7 +65,7 @@ describe('Histogram of gradient.png', function () {
 });
 
 describe('Histogram of gradient-red.png', function () {
-    var path = __dirname + '/images/gradient-red.png';
+    var path = imagePath + 'gradient-red.png';
 
     it('should be greyscale', function (done) {
         histogram(path, function (error, result) {

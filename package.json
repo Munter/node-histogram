@@ -55,7 +55,7 @@
     "lint": "jshint .",
     "test": "npm run lint && mocha && mocha-phantomjs test/global.html",
     "posttest": "uglifyjs lib/index.js -m -c > histogram.min.js",
-    "travis": "npm run lint && run coverage",
+    "travis": "npm run lint && npm run coverage",
     "coverage": "NODE_ENV=development ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --reporter dot"
   }
 }

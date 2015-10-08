@@ -39,7 +39,7 @@
   "devDependencies": {
     "coveralls": "^2.11.1",
     "istanbul": "^0.3.0",
-    "jshint": "^2.5.3",
+    "jshint": "^2.8.0",
     "mocha": "^1.21.4",
     "mocha-lcov-reporter": "0.0.1",
     "mocha-phantomjs": "^3.5.2",

@@ -45,7 +45,7 @@
     "mocha-lcov-reporter": "1.0.0",
     "mocha-phantomjs": "4.0.1",
     "phantomjs": "1.9.13",
-    "uglify-js": "2.5.0",
+    "uglify-js": "2.6.0",
     "unexpected": "10.0.1"
   },
   "optionalDependencies": {},

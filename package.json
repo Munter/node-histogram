@@ -46,7 +46,7 @@
     "mocha-phantomjs": "4.0.1",
     "phantomjs": "1.9.13",
     "uglify-js": "2.5.0",
-    "unexpected": "10.0.1"
+    "unexpected": "10.8.0"
   },
   "optionalDependencies": {},
   "engines": {

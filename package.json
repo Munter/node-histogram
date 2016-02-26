@@ -37,7 +37,7 @@
     "canvas": "1.2.10"
   },
   "devDependencies": {
-    "coveralls": "2.11.4",
+    "coveralls": "2.11.7",
     "es5-shim": "4.1.14",
     "istanbul": "0.3.0",
     "jshint": "2.8.0",

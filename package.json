@@ -37,16 +37,15 @@
     "canvas": "1.2.10"
   },
   "devDependencies": {
-    "coveralls": "2.11.4",
-    "es5-shim": "4.1.14",
-    "istanbul": "0.3.0",
-    "jshint": "2.8.0",
-    "mocha": "1.21.4",
-    "mocha-lcov-reporter": "1.0.0",
+    "coveralls": "2.11.9",
+    "es5-shim": "4.5.7",
+    "istanbul": "0.4.2",
+    "jshint": "2.9.1",
+    "mocha": "2.4.5",
+    "mocha-lcov-reporter": "1.2.0",
     "mocha-phantomjs": "4.0.1",
-    "phantomjs": "1.9.13",
-    "uglify-js": "2.5.0",
-    "unexpected": "10.0.1"
+    "uglify-js": "2.6.2",
+    "unexpected": "10.10.12"
   },
   "optionalDependencies": {},
   "engines": {

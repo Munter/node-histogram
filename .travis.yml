@@ -19,10 +19,6 @@ addons:
       - gcc-4.8
       - g++-4.8
       - libcairo2-dev
-      - libjpeg8-dev
-      - libpango1.0-dev
-      - libgif-dev
-      - build-essential
 env: CXX="g++-4.8" CC="gcc-4.8"
 
 script: "npm run-script travis"

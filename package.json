@@ -38,14 +38,14 @@
   },
   "devDependencies": {
     "coveralls": "2.11.9",
-    "istanbul": "0.4.2",
+    "istanbul": "0.4.3",
     "jshint": "2.9.1",
     "mocha": "2.4.5",
     "mocha-lcov-reporter": "1.2.0",
     "mocha-phantomjs-core": "2.0.1",
     "phantomjs-prebuilt": "2.1.7",
     "uglify-js": "2.6.2",
-    "unexpected": "10.10.12"
+    "unexpected": "10.13.0"
   },
   "optionalDependencies": {},
   "engines": {

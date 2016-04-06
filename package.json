@@ -38,7 +38,6 @@
   },
   "devDependencies": {
     "coveralls": "2.11.9",
-    "es5-shim": "4.5.7",
     "istanbul": "0.4.2",
     "jshint": "2.9.1",
     "mocha": "2.4.5",

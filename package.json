@@ -43,7 +43,8 @@
     "jshint": "2.9.1",
     "mocha": "2.4.5",
     "mocha-lcov-reporter": "1.2.0",
-    "mocha-phantomjs": "4.0.1",
+    "mocha-phantomjs-core": "2.0.1",
+    "phantomjs-prebuilt": "2.1.7",
     "uglify-js": "2.6.2",
     "unexpected": "10.10.12"
   },
@@ -53,8 +54,9 @@
   },
   "scripts": {
     "lint": "jshint .",
-    "test": "npm run lint && mocha && mocha-phantomjs test/global.html",
-    "posttest": "uglifyjs lib/index.js -m -c > histogram.min.js",
+    "phantom": "phantomjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js test/global.html spec \"`node -pe 'JSON.stringify({useColors:true,grep:process.env.grep})'`\"",
+    "test": "npm run lint && mocha && npm run phantom",
+    "preversion": "uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js",
     "travis": "npm run lint && npm run coverage",
     "coverage": "istanbul cover _mocha"
   }

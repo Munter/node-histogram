@@ -34,7 +34,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "canvas": "1.5.0"
+    "canvas": "1.6.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.9",

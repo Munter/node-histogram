@@ -6,12 +6,10 @@ cache:
   directories:
   - node_modules
 node_js:
-  - "0.10"
-  - "0.12"
-  - "1"
-  - "2"
-  - "3"
-  - "4"
+  - '1'
+  - '2'
+  - '3'
+  - '4'
 
 addons:
   apt:

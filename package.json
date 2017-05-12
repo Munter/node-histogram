@@ -45,7 +45,7 @@
     "mocha-phantomjs-core": "^2.0.1",
     "phantomjs-prebuilt": "^2.1.7",
     "uglify-js": "^2.6.2",
-    "unexpected": "^10.13.3"
+    "unexpected": "^10.29.0"
   },
   "optionalDependencies": {},
   "engines": {

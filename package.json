@@ -43,7 +43,7 @@
     "mocha": "^3.0.2",
     "mocha-lcov-reporter": "^1.2.0",
     "mocha-phantomjs-core": "^2.0.1",
-    "phantomjs-prebuilt": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.15",
     "uglify-js": "^2.6.2",
     "unexpected": "^10.13.3"
   },

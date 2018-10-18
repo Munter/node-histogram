@@ -34,7 +34,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "canvas": "^1.6.7"
+    "canvas-prebuilt": "2.0.0-alpha.14"
   },
   "devDependencies": {
     "coveralls": "^2.11.9",
@@ -53,9 +53,8 @@
   },
   "scripts": {
     "lint": "jshint .",
-    "phantom": "phantomjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js test/global.html spec \"`node -pe 'JSON.stringify({useColors:true,grep:process.env.grep})'`\"",
-    "test": "npm run lint && mocha && npm run phantom",
-    "preversion": "uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js",
+    "test": "npm run lint && mocha && mocha-phantomjs test/global.html",
+    "preversion": "npm t && uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js",
     "travis": "npm run lint && npm run coverage",
     "coverage": "istanbul cover _mocha"
   }

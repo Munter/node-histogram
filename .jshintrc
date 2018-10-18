@@ -64,7 +64,7 @@
     "couch"         : false,    // CouchDB
     "devel"         : true,     // Development/debugging (alert, confirm, etc)
     "dojo"          : false,    // Dojo Toolkit
-    "jquery"        : true,     // jQuery
+    "jquery"        : false,     // jQuery
     "mootools"      : false,    // MooTools
     "node"          : false,    // Node.js
     "nonstandard"   : true,     // Widely adopted globals (escape, unescape, etc)

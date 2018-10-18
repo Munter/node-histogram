@@ -33,6 +33,7 @@ describe('Histogram of gradient.png', function () {
 
     it('should be greyscale', function (done) {
         histogram(path, function (error, result) {
+            expect(error, 'to be', null);
             expect(result.greyscale, 'to be true');
 
             done();
@@ -41,6 +42,7 @@ describe('Histogram of gradient.png', function () {
 
     it('should have an alpha channel', function (done) {
         histogram(path, function (error, result) {
+            expect(error, 'to be null');
             expect(result.alphachannel, 'to be true');
 
             done();
@@ -49,6 +51,7 @@ describe('Histogram of gradient.png', function () {
 
     it('should have 256 alpha channel colors', function (done) {
         histogram(path, function (error, result) {
+            expect(error, 'to be null');
             expect(result.colors.rgba, 'to be', 256);
 
             done();
@@ -57,6 +60,7 @@ describe('Histogram of gradient.png', function () {
 
     it('should have 1 rgba color', function (done) {
         histogram(path, function (error, result) {
+            expect(error, 'to be null');
             expect(result.colors.rgb, 'to be', 1);
 
             done();
@@ -69,6 +73,7 @@ describe('Histogram of gradient-red.png', function () {
 
     it('should be greyscale', function (done) {
         histogram(path, function (error, result) {
+            expect(error, 'to be null');
             expect(result.greyscale, 'to be false');
 
             done();
@@ -77,6 +82,7 @@ describe('Histogram of gradient-red.png', function () {
 
     it('should have an alpha channel', function (done) {
         histogram(path, function (error, result) {
+            expect(error, 'to be null');
             expect(result.alphachannel, 'to be true');
 
             done();
@@ -85,6 +91,7 @@ describe('Histogram of gradient-red.png', function () {
 
     it('should have 256 alpha channel colors', function (done) {
         histogram(path, function (error, result) {
+            expect(error, 'to be null');
             expect(result.colors.rgba, 'to be', 256);
 
             done();

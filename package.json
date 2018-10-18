@@ -53,7 +53,7 @@
     "lint": "jshint .",
     "test": "npm run lint && mocha && mocha-chrome test/global.html --chrome-flags '[\"--allow-file-access-from-files\"]'",
     "preversion": "npm t && uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js",
-    "travis": "npm run lint && npm run coverage",
+    "travis": "npm t && npm run coverage",
     "coverage": "nyc --reporter=lcov --reporter=text mocha"
   }
 }

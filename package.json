@@ -37,17 +37,13 @@
     "canvas-prebuilt": "2.0.0-alpha.14"
   },
   "devDependencies": {
-    "coveralls": "3.0.2",
-    "jshint": "2.9.6",
-    "mocha": "5.2.0",
-    "mocha-chrome": "1.1.0",
-    "nyc": "13.1.0",
-    "uglify-js": "3.4.9",
-    "unexpected": "10.39.1"
-  },
-  "optionalDependencies": {},
-  "engines": {
-    "node": "*"
+    "coveralls": "^3.0.2",
+    "jshint": "^2.9.6",
+    "mocha": "^5.2.0",
+    "mocha-chrome": "^1.1.0",
+    "nyc": "^13.1.0",
+    "uglify-js": "^3.4.9",
+    "unexpected": "^10.39.1"
   },
   "scripts": {
     "lint": "jshint .",

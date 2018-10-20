@@ -154,36 +154,3 @@ describe('Histogram of turtle.jpg', function () {
         });
     });
 });
-
-
-describe('Histogram of cablecar.gif', function () {
-    var path = imagePath + 'cablecar.gif';
-
-    it('should not be greyscale', function (done) {
-        histogram(path, function (error, result) {
-            expect(error, 'to be falsy');
-
-            expect(result, 'to satisfy', {
-                greyscale: false
-            });
-
-            done();
-        });
-    });
-});
-
-describe('Histogram of turtle.jpg', function () {
-    var path = imagePath + 'turtle.jpg';
-
-    it('should not be greyscale', function (done) {
-        histogram(path, function (error, result) {
-            expect(error, 'to be falsy');
-
-            expect(result, 'to satisfy', {
-                greyscale: false
-            });
-
-            done();
-        });
-    });
-});

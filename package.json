@@ -34,29 +34,24 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "canvas": "^1.6.7"
+    "canvas-prebuilt": "2.0.0-alpha.14"
   },
   "devDependencies": {
-    "coveralls": "^2.11.9",
-    "istanbul": "^0.4.3",
-    "jshint": "^2.9.2",
-    "mocha": "^3.0.2",
-    "mocha-lcov-reporter": "^1.2.0",
-    "mocha-phantomjs-core": "^2.0.1",
-    "phantomjs-prebuilt": "^2.1.15",
-    "uglify-js": "^2.6.2",
-    "unexpected": "^10.13.3"
-  },
-  "optionalDependencies": {},
-  "engines": {
-    "node": "*"
+    "coveralls": "^3.0.2",
+    "jshint": "^2.9.6",
+    "mocha": "^5.2.0",
+    "mocha-chrome": "^1.1.0",
+    "nyc": "^13.1.0",
+    "uglify-js": "^3.4.9",
+    "unexpected": "^10.39.1"
   },
   "scripts": {
     "lint": "jshint .",
-    "phantom": "phantomjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js test/global.html spec \"`node -pe 'JSON.stringify({useColors:true,grep:process.env.grep})'`\"",
-    "test": "npm run lint && mocha && npm run phantom",
-    "preversion": "uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js",
-    "travis": "npm run lint && npm run coverage",
-    "coverage": "istanbul cover _mocha"
+    "browser-test": "mocha-chrome test/global.html --chrome-flags '[\"--allow-file-access-from-files\"]'",
+    "node-test": "mocha",
+    "test": "npm run lint && npm run node-test && npm run browser-test",
+    "coverage": "nyc --reporter=lcov --reporter=text mocha",
+    "travis": "npm run lint && npm run coverage && npm run browser-test",
+    "preversion": "npm t && uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js"
   }
 }

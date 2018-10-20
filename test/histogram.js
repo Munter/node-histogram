@@ -34,7 +34,10 @@ describe('Histogram of gradient.png', function () {
     it('should be greyscale', function (done) {
         histogram(path, function (error, result) {
             expect(error, 'to be falsy');
-            expect(result.greyscale, 'to be true');
+
+            expect(result, 'to satisfy', {
+                greyscale: true
+            });
 
             done();
         });
@@ -43,25 +46,35 @@ describe('Histogram of gradient.png', function () {
     it('should have an alpha channel', function (done) {
         histogram(path, function (error, result) {
             expect(error, 'to be falsy');
-            expect(result.alphachannel, 'to be true');
+            expect(result, 'to satisfy', {
+                alphachannel: true
+            });
 
             done();
         });
     });
 
-    it('should have 256 alpha channel colors', function (done) {
+    it('should have 256 rgba colors', function (done) {
         histogram(path, function (error, result) {
             expect(error, 'to be falsy');
-            expect(result.colors.rgba, 'to be', 256);
+            expect(result, 'to satisfy', {
+                colors: {
+                    rgba: 256
+                }
+            });
 
             done();
         });
     });
 
-    it('should have 1 rgba color', function (done) {
+    it('should have 1 rgb color', function (done) {
         histogram(path, function (error, result) {
             expect(error, 'to be falsy');
-            expect(result.colors.rgb, 'to be', 1);
+            expect(result, 'to satisfy', {
+                colors: {
+                    rgb: 1
+                }
+            });
 
             done();
         });
@@ -74,7 +87,10 @@ describe('Histogram of gradient-red.png', function () {
     it('should be greyscale', function (done) {
         histogram(path, function (error, result) {
             expect(error, 'to be falsy');
-            expect(result.greyscale, 'to be false');
+
+            expect(result, 'to satisfy', {
+                greyscale: false
+            });
 
             done();
         });
@@ -83,7 +99,10 @@ describe('Histogram of gradient-red.png', function () {
     it('should have an alpha channel', function (done) {
         histogram(path, function (error, result) {
             expect(error, 'to be falsy');
-            expect(result.alphachannel, 'to be true');
+
+            expect(result, 'to satisfy', {
+                alphachannel: true
+            });
 
             done();
         });
@@ -92,7 +111,44 @@ describe('Histogram of gradient-red.png', function () {
     it('should have 256 alpha channel colors', function (done) {
         histogram(path, function (error, result) {
             expect(error, 'to be falsy');
-            expect(result.colors.rgba, 'to be', 256);
+
+            expect(result, 'to satisfy', {
+                colors: {
+                    rgba: 256
+                }
+            });
+
+            done();
+        });
+    });
+});
+
+describe('Histogram of cablecar.gif', function () {
+    var path = imagePath + 'cablecar.gif';
+
+    it('should not be greyscale', function (done) {
+        histogram(path, function (error, result) {
+            expect(error, 'to be falsy');
+
+            expect(result, 'to satisfy', {
+                greyscale: false
+            });
+
+            done();
+        });
+    });
+});
+
+describe('Histogram of turtle.jpg', function () {
+    var path = imagePath + 'turtle.jpg';
+
+    it('should not be greyscale', function (done) {
+        histogram(path, function (error, result) {
+            expect(error, 'to be falsy');
+
+            expect(result, 'to satisfy', {
+                greyscale: false
+            });
 
             done();
         });

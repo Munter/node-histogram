@@ -39,8 +39,8 @@
   "devDependencies": {
     "coveralls": "^3.0.3",
     "jshint": "^2.10.1",
-    "mocha": "^5.2.0",
-    "mocha-chrome": "^1.1.0",
+    "mocha": "^6.0.2",
+    "mocha-chrome": "^2.0.0",
     "nyc": "^13.3.0",
     "uglify-js": "^3.4.9",
     "unexpected": "^11.1.1"

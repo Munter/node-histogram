@@ -1,57 +1,67 @@
 {
-  "author": "Peter Müller <munter@fumle.dk> (http://fumle.dk)",
-  "name": "histogram",
-  "version": "3.0.3",
-  "description": "Provides a histogram data structure of png, gif and jpeg images using canvas. This library works in the browser as well",
-  "keywords": [
-    "histogram",
-    "image",
-    "png",
-    "jpeg",
-    "jpg",
-    "gif"
-  ],
-  "maintainers": [
-    {
-      "name": "Peter Müller",
-      "email": "munter@fumle.dk",
-      "web": "http://fumle.dk"
+    "author": "Peter Müller <munter@fumle.dk> (http://fumle.dk)",
+    "name": "histogram",
+    "version": "3.0.3",
+    "description": "Provides a histogram data structure of png, gif and jpeg images using canvas. This library works in the browser as well",
+    "keywords": [
+        "histogram",
+        "image",
+        "png",
+        "jpeg",
+        "jpg",
+        "gif"
+    ],
+    "maintainers": [
+        {
+            "name": "Peter Müller",
+            "email": "munter@fumle.dk",
+            "web": "http://fumle.dk"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "BeerWare"
+        }
+    ],
+    "homepage": "http://munter.github.com/node-histogram",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Munter/node-histogram.git"
+    },
+    "files": [
+        "lib",
+        "histogram.min.js"
+    ],
+    "main": "dist/histogram.cjs.js",
+    "module": "dist/histogram.esm.mjs",
+    "browser": {
+        "./dist/histogram.js": "./dist/histogram.browser.js",
+        "./dist/histogram.esm.js": "./dist/histogram.browser.esm.js"
+    },
+    "dependencies": {
+        "canvas": "^2.3.1"
+    },
+    "devDependencies": {
+        "coveralls": "^3.0.3",
+        "jshint": "^2.10.1",
+        "mocha": "^6.0.2",
+        "mocha-chrome": "^2.0.0",
+        "nyc": "^13.3.0",
+        "rimraf": "^2.6.3",
+        "rollup": "^1.6.0",
+        "rollup-plugin-node-resolve": "^4.0.1",
+        "uglify-js": "^3.4.9",
+        "unexpected": "^11.1.1"
+    },
+    "scripts": {
+        "lint": "jshint .",
+        "browser-test": "mocha-chrome test/global.html --chrome-flags '[\"--allow-file-access-from-files\"]'",
+        "node-test": "mocha",
+        "test": "npm run lint && npm run node-test && npm run browser-test",
+        "coverage": "nyc --reporter=lcov --reporter=text mocha",
+        "travis": "npm run lint && npm run coverage && npm run browser-test",
+        "prebuild": "rimraf dist",
+        "build": "rollup -c",
+        "preversion": "npm t && uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js"
     }
-  ],
-  "licenses": [
-    {
-      "type": "BeerWare"
-    }
-  ],
-  "homepage": "http://munter.github.com/node-histogram",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Munter/node-histogram.git"
-  },
-  "files": [
-    "lib",
-    "histogram.min.js"
-  ],
-  "main": "lib/index.js",
-  "dependencies": {
-    "canvas": "^2.3.1"
-  },
-  "devDependencies": {
-    "coveralls": "^3.0.3",
-    "jshint": "^2.10.1",
-    "mocha": "^6.0.2",
-    "mocha-chrome": "^2.0.0",
-    "nyc": "^13.3.0",
-    "uglify-js": "^3.4.9",
-    "unexpected": "^11.1.1"
-  },
-  "scripts": {
-    "lint": "jshint .",
-    "browser-test": "mocha-chrome test/global.html --chrome-flags '[\"--allow-file-access-from-files\"]'",
-    "node-test": "mocha",
-    "test": "npm run lint && npm run node-test && npm run browser-test",
-    "coverage": "nyc --reporter=lcov --reporter=text mocha",
-    "travis": "npm run lint && npm run coverage && npm run browser-test",
-    "preversion": "npm t && uglifyjs lib/index.js -m -c > histogram.min.js && git add histogram.min.js"
-  }
 }
